@@ -1,0 +1,39 @@
+{% extends 'securityBase.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    <!-- Page Content -->
+    <div class="container">
+        <br><br><br>
+        <div class="card card-login mx-auto">
+            <div class="card-header text-center">CONNEXION</div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <div class="form-label-group">
+                            <input type="text" id="inputLogin" class="form-control" name="_username" 
+                            placeholder="Entrer votre nom d'utilisateur">
+                            <label for="inputLogin">Entrer votre nom d'utilisateur</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-label-group">
+                            <input type="password" id="inputPassword" name="_password" class="form-control" 
+                            placeholder="Entrer votre mot de passe" required="required">
+                            <label for="inputPassword">Entrer votre mot de passe</label>
+                        </div>
+                    </div>
+                    <input class="btn btn-block text-white" style="background-color: rgb(15,194,65)" type="submit" value="Se connecter">
+                </form>
+            </div>
+            <div class="text-center text-success">
+                <br>
+                Vous n'avez pas de compte?
+                <a href="{{ path('user.inscription') }}" class="text-success"><u>Créer un compte</u></a>
+                <a href="{{ path('user.motdepasseoublier') }}" class="d-block text-success"><u>Mot de passe oublié?</u></a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

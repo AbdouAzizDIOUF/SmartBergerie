@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Gallerie {% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+
+    {#<div class="row">
+        {% for page in pagination %}
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="{{ vich_uploader_asset(page, 'ImageFile') | imagine_filter('thumb') }}" alt=""  sizes="100vw" style=" width: 100%; height:auto;">
+            </div>
+       </div>
+        {% endfor %}
+    </div>#}
+   </div>
+{% endblock %}

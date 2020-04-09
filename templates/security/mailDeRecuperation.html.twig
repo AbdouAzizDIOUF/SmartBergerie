@@ -1,0 +1,37 @@
+{% extends 'securityBase.html.twig' %}
+
+{% block title %}Mail de recuperation{% endblock %}
+
+{% block body %}
+    <!-- Page Content -->
+    <div class="container align-items-end">
+        <br><br><br><br>
+        {% for message in app.flashes('not-user-exist') %}
+            <div class="alert alert-warning text-warning text-center text-info">
+                {{ message }}
+            </div>
+        {% endfor %}
+        <div class="card card-login mx-auto">
+            <div class="card-header text-center">RÉINITIALISER LE MOT DE PASSE</div>
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <h4>Mot de passe oublié? </h4>
+                    <p>Entrez votre adresse de courriel (email) et nous allons vous envoyer les instructions de réinitialisation de votre mot de passe.</p>
+                </div>
+                <form action="{{ path('user.mdpRecuperation') }}" method="post">
+                    <div class="form-group">
+                        <div class="form-label-group">
+                            <input type="email" name="email" id="inputEmail" class="form-control" required="required" placeholder="Entrez votre adresse de courriel">
+                            <label for="inputEmail">Entrez votre adresse de courriel</label>
+                        </div>
+                    </div>
+                    <input class="btn btn-success btn-block" type="submit" value="RÉINITIALISER LE MOT DE PASSE">
+                </form>
+                <div class="text-center">
+                    <a class="d-block small text-success" href="{{ path('user.connexion') }}">Connexion</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

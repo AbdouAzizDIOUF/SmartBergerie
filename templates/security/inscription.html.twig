@@ -1,0 +1,74 @@
+{% extends 'securityBase.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+    <!-- Page Content -->
+    <div class="container">
+    	<br><br><br>
+        <div class="card card-register mx-auto">
+            <div class="card-header text-center">CONSTRUISEZ VOTRE PROFIL</div>
+            <div class="card-body">
+                {{ form_start(form) }}
+                <div class="form-group">
+                    <div class="form-row align-items-end">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form_row(form.Prenom) }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form_row(form.Nom) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        {{ form_row(form.Email) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        {{ form_row(form.Username) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row align-items-end">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form_row(form.Password) }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form_row(form.confirm_password) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row align-items-end">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form_row(form.Telephone) }}
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                {{ form_row(form.Sexe) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input class="btn btn-block text-white" style="background-color: rgb(15,194,65)" type="submit" value="S'INSCRIRE">
+                {{ form_end(form) }}
+            </div>
+            <div class="text-center text-success">
+		        Vous avez déjà un compte?
+		        <a href="{{ path('user.connexion') }}" class="text-success"><u>Connectez-vous</u></a>
+		    </div>
+        </div>
+    </div>
+{% endblock %}

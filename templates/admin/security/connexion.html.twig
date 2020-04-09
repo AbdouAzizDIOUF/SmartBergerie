@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Connexion Administrateurs</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="{{ 'https://ik.imagekit.io/luno/logo_K1RS-PoGw.png' }}" type="image/x-icon">
+        <link rel="stylesheet" href="https://colorlib.com/etc/lf/Login_v2/fonts/iconic/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="https://colorlib.com/etc/lf/Login_v2/css/util.css">
+        <link rel="stylesheet" href="https://colorlib.com/etc/lf/Login_v2/css/main.css">
+    </head>
+    <body>
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form" action="{{ path('admin.connexion') }}" method="post">
+                            <span class="login100-form-title p-b-26">
+                                Bienvenue
+                            </span>
+                    <span class="login100-form-title p-b-48">
+                        <img src="https://ik.imagekit.io/luno/logo_K1RS-PoGw.png" width="200" height="100">
+                        {# <i class="zmdi zmdi-font"></i> #}
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate = "Saissez votre nom d'utilisateur">
+                        <input class="input100" type="text" name="_username">
+                        <span class="focus-input100" data-placeholder="Nom d'utilisateur"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Saissez votre mot de passe">
+                                <span class="btn-show-pass">
+                                    <i class="zmdi zmdi-eye"></i>
+                                </span>
+                        <input class="input100" type="password" name="_password">
+                        <span class="focus-input100" data-placeholder="Mot de passe"></span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn" style="background-color: green;">
+                                Connecter
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="https://colorlib.com/etc/lf/Login_v2/vendor/jquery/jquery-3.2.1.min.js"></script>
+        <script src=https://colorlib.com/etc/lf/Login_v2/js/main.js""></script>
+
+    </body>
+</html>

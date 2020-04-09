@@ -1,0 +1,8 @@
+
+<div class="border border-white bg-success rounded text-white mt-4">
+    {% for descript in description %}
+    <p class="text-justify p-2">
+       {% if descript.Contenu is defined %}{{ descript.Contenu | nl2br }}{% endif %}
+    </p>
+    {% endfor %}
+</div>

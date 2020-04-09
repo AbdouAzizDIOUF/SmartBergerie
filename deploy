@@ -1,0 +1,2 @@
+#!/bin/sh
+	rsync -av ./  lesinesa-sbc@ssh.cluster007.hosting.ovh.net:~/ --include=vendor --include=public/.htaccess --exclude-from=.gitignore --exclude=".*"

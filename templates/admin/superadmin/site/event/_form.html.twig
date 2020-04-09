@@ -1,0 +1,5 @@
+{{ form_start(form) }}
+        {{ form_row(form.Title) }}
+        {{ form_row(form.Contenu) }}
+    <button class="btn btn-success col-sm-3">{{ button|default('Enregistrer') }}</button>
+{{ form_end(form) }}

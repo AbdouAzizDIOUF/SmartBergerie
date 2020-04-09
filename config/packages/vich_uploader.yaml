@@ -1,0 +1,18 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        carrousel_image:
+            uri_prefix: /images/administrateur/site/carroussel
+            upload_destination: '%kernel.project_dir%/public/images/administrateur/site/carroussel'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+
+        album_image:
+            uri_prefix: /images/administrateur/site/album
+            upload_destination: '%kernel.project_dir%/public/images/administrateur/site/album'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+
+        users_profil_image:
+            uri_prefix: /images/administrateur/utilisateur/profils
+            upload_destination: '%kernel.project_dir%/public/images/administrateur//utilisateur/profils'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer

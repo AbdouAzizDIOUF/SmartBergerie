@@ -1,0 +1,15 @@
+{% extends 'superAdmin.html.twig' %}
+
+
+{% block body %}
+
+    <div class="card">
+        <div class="card-header">
+            <strong><center> Ajouter Une Description</center></strong>
+        </div>
+        <div class="card-body card-block">
+            <h2></h2>
+            {{ include('admin/superadmin/site/description/_form.html.twig', {button: 'Enregistrer'}) }}
+        </div>
+    </div>
+{% endblock %}
